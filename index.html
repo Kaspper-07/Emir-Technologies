@@ -1,110 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emir Technologies</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Encabezado -->
+  <!-- Header -->
   <header class="header">
-    <div class="container">
+    <div class="container header-flex">
       <div class="logo">
-  <img src="./img/logo.png" alt="Logo Emir Technologies" />
-  <span>Emir Technologies</span>
-</div>
+        <img src="./img/logo.png" alt="Logo Emir Technologies">
+        <span>Emir Technologies</span>
+      </div>
       <nav class="nav">
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#tecnologias">Tecnologías</a></li>
-          <li><a href="#clientes">Clientes</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Sección Inicio -->
+  <!-- Hero -->
   <section id="inicio" class="hero">
     <div class="container">
-      <h2>Innovación y tecnología a tu alcance</h2>
-      <p>Servicios integrales en tecnología, consultoría y soluciones digitales.</p>
-      <a href="#contacto" class="btn">Contáctanos</a>
+      <h1>Soluciones Tecnológicas Integrales</h1>
+      <p>Transformamos ideas en tecnología funcional y estratégica para tu negocio.</p>
+      <a href="#contacto" class="btn-primary">Contáctanos</a>
     </div>
   </section>
 
-  <!-- Sección Nosotros -->
+  <!-- Nosotros -->
   <section id="nosotros" class="section">
     <div class="container">
       <h2>¿Quiénes somos?</h2>
-      <p>En Emir Technologies nos dedicamos a ofrecer soluciones tecnológicas y consultoría profesional, respaldados por un equipo multidisciplinario con enfoque en resultados.</p>
+      <p>Emir Technologies es una empresa mexicana dedicada al desarrollo, implementación y gestión de soluciones tecnológicas, consultoría, y servicios estratégicos para organizaciones públicas y privadas.</p>
+      <div class="valores">
+        <div>
+          <h3>Misión</h3>
+          <p>Brindar soluciones tecnológicas eficientes y personalizadas.</p>
+        </div>
+        <div>
+          <h3>Visión</h3>
+          <p>Ser líderes en innovación digital y transformación empresarial.</p>
+        </div>
+        <div>
+          <h3>Valores</h3>
+          <p>Compromiso, integridad, innovación y excelencia.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Sección Servicios -->
+  <!-- Servicios -->
   <section id="servicios" class="section bg-light">
     <div class="container">
       <h2>Nuestros Servicios</h2>
       <div class="grid">
         <div class="card">
           <h3>Desarrollo de Software</h3>
-          <p>Aplicaciones a medida, despliegue y soporte técnico.</p>
+          <p>Soluciones digitales a medida para impulsar tu negocio.</p>
         </div>
         <div class="card">
           <h3>Consultoría TI y Administrativa</h3>
-          <p>Asesoría profesional en procesos técnicos y organizacionales.</p>
+          <p>Optimización de procesos y acompañamiento estratégico.</p>
         </div>
         <div class="card">
           <h3>Publicidad y Diseño</h3>
-          <p>Diseño gráfico, impresión, identidad visual y campañas.</p>
+          <p>Imagen corporativa, material gráfico y estrategias publicitarias.</p>
         </div>
         <div class="card">
-          <h3>Comercialización de Equipos</h3>
-          <p>Venta de hardware, software y equipos electrónicos.</p>
+          <h3>Comercialización de Tecnología</h3>
+          <p>Venta de equipos y soluciones informáticas de última generación.</p>
         </div>
         <div class="card">
           <h3>Trámites y Gestoría</h3>
-          <p>Regularización y apoyo en procesos administrativos y logísticos.</p>
+          <p>Apoyo en procesos administrativos y logísticos empresariales.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sección Tecnologías -->
+  <!-- Tecnologías -->
   <section id="tecnologias" class="section">
     <div class="container">
       <h2>Tecnologías</h2>
-      <p>Trabajamos con herramientas líderes del mercado para garantizar resultados óptimos.</p>
-      <!-- Aquí pueden ir logos o descripciones breves de tecnologías usadas -->
+      <p>Usamos plataformas, lenguajes y sistemas líderes en la industria.</p>
+      <div class="logos-tecnologias">
+        <!-- Aquí puedes agregar íconos de tecnologías como HTML, CSS, Linux, etc. -->
+      </div>
     </div>
   </section>
 
-  <!-- Sección Clientes -->
-  <section id="clientes" class="section bg-light">
+  <!-- Contacto -->
+  <section id="contacto" class="section bg-light">
     <div class="container">
-      <h2>Clientes</h2>
-      <p>Empresas y organizaciones que confían en nosotros.</p>
-      <!-- Espacio para testimonios o logos -->
-    </div>
-  </section>
-
-  <!-- Sección Contacto -->
-  <section id="contacto" class="section">
-    <div class="container">
-      <h2>Contacto</h2>
+      <h2>Contáctanos</h2>
       <form class="contact-form">
-        <input type="text" placeholder="Nombre" required />
-        <input type="email" placeholder="Correo electrónico" required />
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
         <textarea placeholder="Mensaje" required></textarea>
-        <button type="submit" class="btn">Enviar</button>
+        <button type="submit" class="btn-primary">Enviar mensaje</button>
       </form>
     </div>
   </section>
 
-  <!-- Pie de página -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 Emir Technologies. Todos los derechos reservados.</p>
