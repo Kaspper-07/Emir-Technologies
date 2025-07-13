@@ -271,7 +271,6 @@ body > div[style*="height: 72px"] {
   animation: sectionFadeIn 1s cubic-bezier(.44,.02,.38,1.3) both;
   position: relative;
 }
-/* QUITA la barra amarilla */
 .section-title::before { display: none !important; }
 
 @keyframes sectionFadeIn {
@@ -318,7 +317,7 @@ body > div[style*="height: 72px"] {
 }
 .mv-card {
   background: #18181c;
-  border: none;
+  border: 1.5px solid #23232b;
   box-shadow: none;
   border-radius: 20px;
   padding: 32px 28px 24px 28px;
@@ -327,6 +326,7 @@ body > div[style*="height: 72px"] {
   flex: 1 1 280px;
   transition: 
     background 0.22s,
+    border-color 0.2s,
     transform 0.18s;
   opacity: 0.92;
   position: relative;
@@ -382,7 +382,7 @@ body > div[style*="height: 72px"] {
 }
 .servicio-card {
   background: #18181c;
-  border: none;
+  border: 1.5px solid #23232b;
   box-shadow: none;
   border-radius: 20px;
   padding: 38px 30px 28px 30px;
@@ -394,6 +394,7 @@ body > div[style*="height: 72px"] {
   align-items: flex-start;
   transition: 
     background 0.22s,
+    border-color 0.2s,
     transform 0.18s;
   opacity: 0;
   transform: translateY(48px) scale(0.98);
@@ -420,6 +421,7 @@ body > div[style*="height: 72px"] {
 
 .servicio-card:hover {
   background: #23232b;
+  border-color: #ffe082;
   box-shadow: none;
   transform: translateY(-3px) scale(1.02);
 }
@@ -476,7 +478,7 @@ body > div[style*="height: 72px"] {
 }
 .tecnologia-card {
   background: #18181c;
-  border: none;
+  border: 1.5px solid #23232b;
   box-shadow: none;
   border-radius: 20px;
   color: #ffe082;
@@ -490,6 +492,7 @@ body > div[style*="height: 72px"] {
   min-height: 70px;
   transition: 
     background 0.22s,
+    border-color 0.2s,
     transform 0.18s;
   cursor: pointer;
   opacity: 0;
@@ -508,6 +511,7 @@ body > div[style*="height: 72px"] {
 }
 .tecnologia-card:hover {
   background: #23232b;
+  border-color: #ffe082;
   box-shadow: none;
   transform: translateY(-3px) scale(1.02);
 }
@@ -532,11 +536,12 @@ body > div[style*="height: 72px"] {
   max-width: 500px;
   margin-top: 28px;
   background: #18181c;
-  border: none;
+  border: 1.5px solid #23232b;
   box-shadow: none;
   border-radius: 20px;
   transition: 
     background 0.22s,
+    border-color 0.2s,
     transform 0.18s;
   padding: 36px 32px 26px 32px;
   display: flex;
@@ -620,9 +625,41 @@ footer {
   border-top: 1.5px solid #23232b;
 }
 
+.footer-redes {
+  margin-top: 10px;
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-redes {
+  margin-top: 10px;
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  align-items: center;
+}
+.footer-icon-svg svg {
+  width: 42px;
+  height: 42px;
+  opacity: 0.82;
+  filter: drop-shadow(0 2px 8px #ffe08235);
+  transition: opacity 0.18s, filter 0.18s, transform 0.18s;
+  background: transparent;
+}
+.footer-icon-svg:hover svg {
+  opacity: 1;
+  filter: brightness(150) drop-shadow(0 3px 16px #ffe08277);
+  transform: scale(1.16) rotate(-5deg);
+  cursor: pointer;
+}
+
+
+/* ====== TARJETAS Y FORMULARIO: BORDE PROFESIONAL ====== */
 .mv-card, .servicio-card, .tecnologia-card, .contact-form {
   background: #18181c;
-  border: 1.5px solid #23232b; /* Puedes usar #363642 o rgba(255,255,255,0.09) */
+  border: 1.5px solid #23232b;
   box-shadow: none;
   border-radius: 20px;
   transition:
@@ -639,6 +676,113 @@ footer {
   transform: translateY(-3px) scale(1.02);
 }
 
+/* ====== SECCIÓN DE DIRECCIÓN / MAPA ====== */
+.direccion-section {
+  width: 100%;
+  max-width: 900px;
+  margin: 48px auto 0 auto;
+  border-radius: 20px;
+  background: #18181c;
+  box-shadow: 0 4px 24px #0004;
+  padding: 0;
+}
+
+.direccion-flex {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.direccion-texto {
+  flex: 1 1 330px;
+  padding: 40px 32px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px 0 0 20px;
+  background: rgba(24,24,28,0.93);
+}
+
+.direccion-section .section-title {
+  margin-bottom: 16px;
+  padding-left: 0;
+  text-align: left;
+}
+.direccion-txt {
+  color: #ffe082;
+  font-size: 1.14rem;
+  font-family: 'Inter', Arial, sans-serif;
+  text-shadow: 0 0 8px #18181c77;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.direccion-mapa {
+  flex: 1 1 370px;
+  min-width: 320px;
+  max-width: 500px;
+  border-radius: 0 20px 20px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#js-mapa-bg {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  border-radius: 0 20px 20px 0;
+  filter: grayscale(0.7) brightness(0.7);
+}
+
+/* Subtítulo de "¿Quiénes somos?" blanco */
+.section-subtitle {
+  color: #fff !important;
+}
+
+/* Subtítulo de "Nuestra Ubicación" blanco */
+.direccion-txt {
+  color: #fff !important;
+}
+
+/* Descripciones de tarjetas en blanco, títulos en amarillo */
+.mv-card p,
+.servicio-card p {
+  color: #fff !important;
+}
+
+/* El título de las tarjetas sigue amarillo: */
+.mv-card .mv-title,
+.servicio-card h3 {
+  color: #ffe082 !important;
+}
+
+
+/* Subtítulos de todas las secciones (quienes somos, tecnologias, dirección) */
+.section-subtitle,
+.tecnologias-desc,
+.direccion-txt {
+  color: #fff !important;
+}
+
+/* Descripciones de las cards en blanco */
+.mv-card p,
+.servicio-card p,
+.tecnologia-card {
+  color: #fff !important;
+}
+
+/* Títulos de las cards siguen amarillos */
+.mv-card .mv-title,
+.servicio-card h3,
+.tecnologia-card .tec-ico {
+  color: #ffe082 !important;
+}
+
+/* Si las tecnologías usan <p> también, añade: */
+.tecnologia-card p {
+  color: #fff !important;
+}
 
 
 /* ====== RESPONSIVE ====== */
@@ -710,4 +854,3 @@ footer {
     padding: 18px 7vw 18px 7vw;
   }
 }
-

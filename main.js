@@ -133,16 +133,16 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.particlesJS && document.getElementById("global-particles")) {
     particlesJS("global-particles", {
       "particles": {
-        "number": { "value": 75 },  // ← antes era 36
+        "number": { "value": 75 },
         "color": { "value": "#ffe082" },
         "shape": { "type": "circle" },
-        "opacity": { "value": 0.26, "random": true }, // ← antes era 0.16
-        "size": { "value": 3.1, "random": true }, // ← antes era 2.3
+        "opacity": { "value": 0.26, "random": true },
+        "size": { "value": 3.1, "random": true },
         "line_linked": {
           "enable": true,
-          "distance": 62, // Puedes reducir para más líneas, por ejemplo, 62 (antes 70)
+          "distance": 62,
           "color": "#e53935",
-          "opacity": 0.19, // ← antes era 0.14
+          "opacity": 0.19,
           "width": 1.1
         },
         "move": {
@@ -180,3 +180,22 @@ function handleFadeOnScroll() {
 window.addEventListener('scroll', handleFadeOnScroll);
 window.addEventListener('DOMContentLoaded', handleFadeOnScroll);
 
+// ===== MAPA INTERACTIVO LEAFLET EN SECCIÓN DE DIRECCIÓN =====
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.L && document.getElementById("js-mapa-bg")) {
+    var map = L.map('js-mapa-bg', {
+      center: [19.4132326, -99.1679688],
+      zoom: 16,
+      zoomControl: true,    // <--- INTERACTIVO (permitir zoom y mover)
+      attributionControl: false
+    });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  maxZoom: 19
+}).addTo(map);
+
+    // Marker con popup
+    L.marker([19.4132326, -99.1679688]).addTo(map)
+      .bindPopup('Avenida Yucatán 54').openPopup();
+  }
+});
