@@ -1,18 +1,21 @@
 // ========== UTILS ==========
 function isMobile() {
-  return window.innerWidth <= 900 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  return window.innerWidth <= 900 ||
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
 // ========== NAVBAR HAMBURGUESA ==========
 document.addEventListener("DOMContentLoaded", function () {
   const navToggle = document.getElementById('nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  const navLinks = document.getElementById('nav-links');
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', function () {
       navLinks.classList.toggle('open');
     });
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+      });
     });
   }
 });

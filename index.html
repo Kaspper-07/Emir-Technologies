@@ -16,26 +16,34 @@
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
-  <!-- NAVBAR -->
+  <!-- NAVBAR CENTRADO -->
   <nav class="navbar">
-  <div class="logo-area">
-    <img src="./img/logo1.png" alt="EMIR Technologies Logo">
-  </div>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="#inicio" class="active">Inicio</a></li>
-    <li><a href="#nosotros">Nosotros</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#tecnologias">Tecnologías</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-  <div id="navbar-particles"></div>
-</nav>
-  <div style="height: 72px; width: 100%;"></div>
+    <div class="navbar-inner">
+      <div class="logo-area">
+        <img src="./img/logo1.png" alt="EMIR Technologies Logo">
+      </div>
+      <!-- Botón Hamburguesa -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#tecnologias">Tecnologías</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav-right"></div>
+    </div>
+    <div id="navbar-particles"></div>
+  </nav>
 
-  <!-- HERO / HEADER -->
+  <!-- Espacio para navbar fijo -->
+  <div style="height: 72px;"></div>
+
+  <!-- HERO -->
   <header class="hero" id="inicio">
     <div id="hero-particles"></div>
     <div class="hero-content">
@@ -82,7 +90,7 @@
       </div>
     </section>
 
-    <!-- SECCIONES CON FONDO DE PARTÍCULAS COMPARTIDO -->
+    <!-- FONDO DE PARTÍCULAS COMPARTIDO -->
     <div class="tech-bg-section">
       <div id="global-particles"></div>
 
