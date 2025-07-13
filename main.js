@@ -133,21 +133,21 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.particlesJS && document.getElementById("global-particles")) {
     particlesJS("global-particles", {
       "particles": {
-        "number": { "value": 36 },
+        "number": { "value": 75 },  // ← antes era 36
         "color": { "value": "#ffe082" },
         "shape": { "type": "circle" },
-        "opacity": { "value": 0.16, "random": true },
-        "size": { "value": 2.3, "random": true },
+        "opacity": { "value": 0.26, "random": true }, // ← antes era 0.16
+        "size": { "value": 3.1, "random": true }, // ← antes era 2.3
         "line_linked": {
           "enable": true,
-          "distance": 70,
+          "distance": 62, // Puedes reducir para más líneas, por ejemplo, 62 (antes 70)
           "color": "#e53935",
-          "opacity": 0.14,
-          "width": 1
+          "opacity": 0.19, // ← antes era 0.14
+          "width": 1.1
         },
         "move": {
           "enable": true,
-          "speed": 1.2,
+          "speed": 1.15,
           "direction": "none",
           "random": false,
           "straight": false,
