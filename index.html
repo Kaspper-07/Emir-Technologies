@@ -1,120 +1,220 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Emir Technologies</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Librerías para efectos visuales -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-flex">
-      <div class="logo">
-        <img src="./img/logo.png" alt="Logo Emir Technologies">
-        <span>Emir Technologies</span>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div id="navbar-particles"></div>
+    <div class="logo-area">
+      <img src="./img/logo1.png" alt="EMIR Technologies Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio" class="active">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#tecnologias">Tecnologías</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <div style="height: 72px; width: 100%;"></div>
+
+  <!-- HERO / HEADER -->
+  <header class="hero" id="inicio">
+    <div id="hero-particles"></div>
+    <div class="hero-content">
+      <img src="./img/logo1.png" alt="EMIR Technologies Logo" class="logo-hero-center">
+      <h1 id="hero-title"></h1>
+      <div class="hero-description">
+        <p>
+          Somos tu aliado estratégico en <span class="highlight">tecnología</span>,
+          <span class="highlight">automatización</span> y
+          <span class="highlight">soluciones digitales</span> para empresas que quieren crecer en la era digital.
+        </p>
+        <div class="description-underline"></div>
       </div>
-      <nav class="nav">
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#tecnologias">Tecnologías</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="inicio" class="hero">
-    <div class="container">
-      <h1>Soluciones Tecnológicas Integrales</h1>
-      <p>Transformamos ideas en tecnología funcional y estratégica para tu negocio.</p>
-      <a href="#contacto" class="btn-primary">Contáctanos</a>
-    </div>
-  </section>
-
-  <!-- Nosotros -->
-  <section id="nosotros" class="section">
-    <div class="container">
-      <h2>¿Quiénes somos?</h2>
-      <p>Emir Technologies es una empresa mexicana dedicada al desarrollo, implementación y gestión de soluciones tecnológicas, consultoría, y servicios estratégicos para organizaciones públicas y privadas.</p>
-      <div class="valores">
-        <div>
-          <h3>Misión</h3>
-          <p>Brindar soluciones tecnológicas eficientes y personalizadas.</p>
-        </div>
-        <div>
-          <h3>Visión</h3>
-          <p>Ser líderes en innovación digital y transformación empresarial.</p>
-        </div>
-        <div>
-          <h3>Valores</h3>
-          <p>Compromiso, integridad, innovación y excelencia.</p>
-        </div>
+  <main>
+    <!-- QUIÉNES SOMOS -->
+    <section class="container nosotros-flex section-tech-bg" id="nosotros" style="position: relative; margin-top: 48px;">
+      <div id="quienes-globe"></div>
+      <div class="nosotros-img fade-on-scroll">
+        <img src="img/quienes-somos.jpg" alt="Quiénes somos Tech" />
       </div>
-    </div>
-  </section>
-
-  <!-- Servicios -->
-  <section id="servicios" class="section bg-light">
-    <div class="container">
-      <h2>Nuestros Servicios</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Desarrollo de Software</h3>
-          <p>Soluciones digitales a medida para impulsar tu negocio.</p>
-        </div>
-        <div class="card">
-          <h3>Consultoría TI y Administrativa</h3>
-          <p>Optimización de procesos y acompañamiento estratégico.</p>
-        </div>
-        <div class="card">
-          <h3>Publicidad y Diseño</h3>
-          <p>Imagen corporativa, material gráfico y estrategias publicitarias.</p>
-        </div>
-        <div class="card">
-          <h3>Comercialización de Tecnología</h3>
-          <p>Venta de equipos y soluciones informáticas de última generación.</p>
-        </div>
-        <div class="card">
-          <h3>Trámites y Gestoría</h3>
-          <p>Apoyo en procesos administrativos y logísticos empresariales.</p>
-        </div>
+      <div class="nosotros-texto">
+        <h2 class="section-title fade-on-scroll" id="quienes-title">¿Quiénes somos?</h2>
+        <p class="section-subtitle fade-on-scroll" id="quienes-sub">
+          Emir Technologies es una empresa mexicana especializada en el desarrollo, implementación y gestión de soluciones tecnológicas avanzadas para empresas públicas y privadas.
+        </p>
+        <p class="section-subtitle fade-on-scroll">
+          Nuestro enfoque abarca desde la consultoría y automatización de procesos, hasta la creación, despliegue y soporte de aplicaciones informáticas integrales, infraestructura de TI, así como el diseño y ejecución de estrategias digitales.
+        </p>
+        <p class="section-subtitle fade-on-scroll">
+          Nos dedicamos a ofrecer servicios innovadores en informática, comunicaciones, tecnología y seguridad, abarcando la venta y arrendamiento de equipos, desarrollo de software, licenciamiento, mantenimiento y soporte técnico, consultoría especializada, así como el diseño e impresión de material publicitario digital y físico.
+        </p>
+        <p class="section-subtitle fade-on-scroll">
+          Además, brindamos asesoría estratégica en marketing, administración y capacitación, apoyando a empresas en la modernización y optimización de sus operaciones.
+        </p>
+        <p class="section-subtitle fade-on-scroll">
+          En Emir Technologies trabajamos bajo los más altos estándares de calidad y confidencialidad, adaptándonos a las necesidades de cada cliente. Nuestro equipo multidisciplinario integra experiencia en administración, ingeniería, sistemas y tecnologías de la información, permitiéndonos brindar soluciones integrales y personalizadas para el crecimiento y transformación digital de las organizaciones.
+        </p>
+        <p class="section-subtitle fade-on-scroll">
+          Nuestro compromiso es ser el aliado estratégico de quienes buscan innovación, eficiencia y seguridad en sus procesos tecnológicos, contribuyendo al desarrollo empresarial y a la evolución digital en México y el mundo.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Tecnologías -->
-  <section id="tecnologias" class="section">
-    <div class="container">
-      <h2>Tecnologías</h2>
-      <p>Usamos plataformas, lenguajes y sistemas líderes en la industria.</p>
-      <div class="logos-tecnologias">
-        <!-- Aquí puedes agregar íconos de tecnologías como HTML, CSS, Linux, etc. -->
-      </div>
-    </div>
-  </section>
+    <!-- SECCIONES CON FONDO DE PARTÍCULAS COMPARTIDO -->
+    <div class="tech-bg-section">
+      <div id="global-particles"></div>
 
-  <!-- Contacto -->
-  <section id="contacto" class="section bg-light">
-    <div class="container">
-      <h2>Contáctanos</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Nombre" required>
-        <input type="email" placeholder="Correo electrónico" required>
-        <textarea placeholder="Mensaje" required></textarea>
-        <button type="submit" class="btn-primary">Enviar mensaje</button>
-      </form>
-    </div>
-  </section>
+      <!-- MISIÓN, VISIÓN, VALORES -->
+      <section class="mision-vision-valores-section">
+        <h2 class="section-title fade-on-scroll">Misión, Visión y Valores</h2>
+        <div class="mv-cards">
+          <div class="mv-card fade-on-scroll">
+            <h3 class="mv-title">Misión</h3>
+            <p>
+              Proveer soluciones tecnológicas innovadoras y personalizadas que contribuyan al crecimiento, eficiencia y seguridad de nuestros clientes, impulsando su transformación digital y el éxito en sus objetivos estratégicos.
+            </p>
+          </div>
+          <div class="mv-card fade-on-scroll">
+            <h3 class="mv-title">Visión</h3>
+            <p>
+              Ser una empresa líder a nivel nacional en consultoría, desarrollo e integración de tecnologías de la información, reconocida por la calidad, confiabilidad y vanguardia de nuestros servicios y por nuestro compromiso con el desarrollo tecnológico de México.
+            </p>
+          </div>
+          <div class="mv-card fade-on-scroll">
+            <h3 class="mv-title">Valores</h3>
+            <p>
+              Innovación, integridad, compromiso, excelencia, responsabilidad y trabajo en equipo. Nos guiamos por la ética profesional y el respeto, enfocándonos siempre en la satisfacción y confianza de nuestros clientes.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Emir Technologies. Todos los derechos reservados.</p>
+      <!-- SERVICIOS -->
+      <section class="servicios-section" id="servicios">
+        <h2 class="section-title fade-on-scroll">Nuestros servicios</h2>
+        <div class="servicios-grid">
+          <div class="servicio-card fade-on-scroll fade-left">
+            <div class="servicio-icon"><span>💡</span></div>
+            <h3>Consultoría en TI y procesos</h3>
+            <p>Asesoría profesional en tecnologías de la información, análisis de procesos y optimización digital para empresas públicas y privadas.</p>
+          </div>
+          <div class="servicio-card fade-on-scroll fade-up">
+            <div class="servicio-icon"><span>🛠️</span></div>
+            <h3>Desarrollo de software</h3>
+            <p>Desarrollo, implementación y despliegue de aplicaciones web, móviles y sistemas integrales a la medida de tus necesidades.</p>
+          </div>
+          <div class="servicio-card fade-on-scroll fade-right">
+            <div class="servicio-icon"><span>🤖</span></div>
+            <h3>Automatización de procesos</h3>
+            <p>Soluciones de automatización para incrementar la eficiencia operativa y reducir errores en tareas repetitivas.</p>
+          </div>
+          <div class="servicio-card fade-on-scroll fade-left">
+            <div class="servicio-icon"><span>🔒</span></div>
+            <h3>Seguridad informática</h3>
+            <p>Protección de sistemas, datos y redes empresariales mediante estrategias avanzadas de ciberseguridad.</p>
+          </div>
+          <div class="servicio-card fade-on-scroll fade-up">
+            <div class="servicio-icon"><span>🖥️</span></div>
+            <h3>Infraestructura y redes</h3>
+            <p>Diseño, implementación y mantenimiento de redes de cómputo, servidores y centros de datos.</p>
+          </div>
+          <div class="servicio-card fade-on-scroll fade-right">
+            <div class="servicio-icon"><span>🎟️</span></div>
+            <h3>Licenciamiento y venta de software</h3>
+            <p>Comercialización, arrendamiento y gestión de licencias de software de acuerdo a los requerimientos de tu empresa.</p>
+          </div>
+          <div class="servicio-card fade-on-scroll fade-left">
+            <div class="servicio-icon"><span>💻</span></div>
+            <h3>Venta y arrendamiento de equipos</h3>
+            <p>Suministro de equipos de cómputo, dispositivos tecnológicos y accesorios con garantía y soporte.</p>
+          </div>
+          <div class="servicio-card fade-on-scroll fade-up">
+            <div class="servicio-icon"><span>🔧</span></div>
+            <h3>Soporte técnico y mantenimiento</h3>
+            <p>Atención personalizada y mantenimiento preventivo/correctivo de hardware y software.</p>
+          </div>
+          <div class="servicio-card fade-on-scroll fade-right">
+            <div class="servicio-icon"><span>📈</span></div>
+            <h3>Marketing digital y diseño</h3>
+            <p>Creación de campañas digitales, gestión de redes sociales, diseño gráfico y material publicitario.</p>
+          </div>
+          <div class="servicio-card fade-on-scroll fade-left">
+            <div class="servicio-icon"><span>🎓</span></div>
+            <h3>Capacitación tecnológica</h3>
+            <p>Entrenamiento, cursos y talleres para fortalecer el conocimiento y habilidades en tecnología de tu equipo.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECNOLOGÍAS -->
+      <section class="tecnologias-section" id="tecnologias">
+        <h2 class="section-title fade-on-scroll">Tecnologías</h2>
+        <p class="tecnologias-desc fade-on-scroll">
+          En Emir Technologies trabajamos con las herramientas y plataformas más avanzadas del sector, integrando soluciones tecnológicas de última generación para potenciar la transformación digital de nuestros clientes.<br>
+          Nuestra experiencia abarca desde lenguajes de programación modernos, infraestructura cloud, sistemas operativos empresariales y frameworks de desarrollo, hasta tecnologías de automatización, seguridad, bases de datos y conectividad.
+        </p>
+        <div class="tecnologias-grid">
+          <div class="tecnologia-card fade-on-scroll"><span class="tec-ico">🐍</span>Python</div>
+          <div class="tecnologia-card fade-on-scroll"><span class="tec-ico">⚛️</span>React</div>
+          <div class="tecnologia-card fade-on-scroll"><span class="tec-ico">🟨</span>JavaScript</div>
+          <div class="tecnologia-card fade-on-scroll"><span class="tec-ico">🟩</span>Node.js</div>
+          <div class="tecnologia-card fade-on-scroll"><span class="tec-ico">🐘</span>PHP</div>
+          <div class="tecnologia-card fade-on-scroll"><span class="tec-ico">🛢️</span>MySQL / PostgreSQL</div>
+          <div class="tecnologia-card fade-on-scroll"><span class="tec-ico">🐳</span>Docker</div>
+          <div class="tecnologia-card fade-on-scroll"><span class="tec-ico">☁️</span>AWS / Azure / Google Cloud</div>
+          <div class="tecnologia-card fade-on-scroll"><span class="tec-ico">🐧</span>Linux / Windows Server</div>
+          <div class="tecnologia-card fade-on-scroll"><span class="tec-ico">🔒</span>Firewall & Seguridad</div>
+          <div class="tecnologia-card fade-on-scroll"><span class="tec-ico">🤖</span>Automatización RPA</div>
+          <div class="tecnologia-card fade-on-scroll"><span class="tec-ico">🔌</span>APIs y servicios web</div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="contacto-section" id="contacto">
+        <h2 class="section-title fade-on-scroll">Contacto</h2>
+        <form class="contact-form fade-on-scroll">
+          <div class="contact-field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="off" />
+          </div>
+          <div class="contact-field">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required autocomplete="off" />
+          </div>
+          <div class="contact-field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="off" />
+          </div>
+          <div class="contact-field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+          </div>
+          <button type="submit" class="btn-contacto">Enviar mensaje</button>
+        </form>
+      </section>
     </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 EMIR Technologies. Todos los derechos reservados.</p>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
