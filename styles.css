@@ -1,3 +1,9 @@
+/* ====== GOOGLE FONTS (Agregar en tu HTML <head>) ====== */
+/*
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+*/
+
 /* ====== RESET & BASE ====== */
 * {
   margin: 0;
@@ -9,6 +15,16 @@ body {
   background: #18181c;
   color: #eee;
   min-height: 100vh;
+}
+
+.section-title,
+h1, h2, h3,
+.mv-title,
+.servicio-card h3,
+.tecnologia-card,
+.contact-form label {
+  font-family: 'Space Grotesk', 'Inter', Arial, sans-serif;
+  letter-spacing: 1.2px;
 }
 
 /* ====== NAVBAR ====== */
@@ -255,21 +271,9 @@ body > div[style*="height: 72px"] {
   animation: sectionFadeIn 1s cubic-bezier(.44,.02,.38,1.3) both;
   position: relative;
 }
-.section-title::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 13%;
-  width: 10px;
-  height: 74%;
-  background: linear-gradient(180deg, #ffe082 0%, #e53935 98%);
-  border-radius: 4px;
-  box-shadow: 0 0 9px #e53935aa;
-  animation: barGlow .9s .18s cubic-bezier(.44,.02,.38,1.3) both;
-}
-@keyframes barGlow {
-  from { height: 0; opacity: 0.2;}
-  to   { height: 74%; opacity: 1;}
-}
+/* QUITA la barra amarilla */
+.section-title::before { display: none !important; }
+
 @keyframes sectionFadeIn {
   from { opacity: 0; transform: translateY(24px);}
   to   { opacity: 1; transform: none;}
@@ -315,16 +319,15 @@ body > div[style*="height: 72px"] {
 .mv-card {
   background: #18181c;
   border: none;
-  box-shadow: 0 6px 32px 0 #000a, 0 2px 10px #e5393510;
+  box-shadow: none;
   border-radius: 20px;
   padding: 32px 28px 24px 28px;
   min-width: 270px;
   max-width: 340px;
   flex: 1 1 280px;
   transition: 
-    transform 0.39s cubic-bezier(.44,.02,.38,1.3),
-    box-shadow 0.24s cubic-bezier(.44,.02,.38,1.3),
-    background 0.23s;
+    background 0.22s,
+    transform 0.18s;
   opacity: 0.92;
   position: relative;
   z-index: 1;
@@ -335,7 +338,6 @@ body > div[style*="height: 72px"] {
 .mv-card.visible {
   opacity: 1;
   transform: none;
-  box-shadow: 0 12px 38px #e5393530, 0 3px 14px #ffe57f33;
   animation: cardPopIn 0.9s cubic-bezier(.44,.02,.38,1.3);
 }
 @keyframes cardPopIn {
@@ -352,17 +354,7 @@ body > div[style*="height: 72px"] {
   text-shadow: 0 0 9px #e53935aa, 0 0 4px #ffe08277;
   position: relative;
 }
-.mv-title::before {
-  content: '';
-  position: absolute;
-  left: -18px;
-  top: 11px;
-  width: 10px;
-  height: 30px;
-  border-radius: 4px;
-  background: linear-gradient(180deg, #ffe082 40%, #e53935 98%);
-  box-shadow: 0 0 8px #e53935aa;
-}
+.mv-title::before { display: none !important; }
 .mv-card p {
   color: #ffe082;
   font-size: 1.06rem;
@@ -391,7 +383,7 @@ body > div[style*="height: 72px"] {
 .servicio-card {
   background: #18181c;
   border: none;
-  box-shadow: 0 6px 32px 0 #000a, 0 2px 10px #e5393510;
+  box-shadow: none;
   border-radius: 20px;
   padding: 38px 30px 28px 30px;
   position: relative;
@@ -401,9 +393,8 @@ body > div[style*="height: 72px"] {
   flex-direction: column;
   align-items: flex-start;
   transition: 
-    transform 0.39s cubic-bezier(.44,.02,.38,1.3),
-    box-shadow 0.23s cubic-bezier(.44,.02,.38,1.3),
-    background 0.28s;
+    background 0.22s,
+    transform 0.18s;
   opacity: 0;
   transform: translateY(48px) scale(0.98);
   cursor: pointer;
@@ -412,7 +403,6 @@ body > div[style*="height: 72px"] {
 .servicio-card.visible {
   opacity: 1;
   transform: none;
-  box-shadow: 0 12px 38px #e5393530, 0 3px 14px #ffe57f33;
   animation: cardPopInServicios 1s cubic-bezier(.44,.02,.38,1.3);
 }
 @keyframes cardPopInServicios {
@@ -429,9 +419,9 @@ body > div[style*="height: 72px"] {
 @keyframes fadeInRight{ from {opacity:0; transform: translateX(60px) scale(0.94);} to{opacity:1;transform:none;} }
 
 .servicio-card:hover {
-  box-shadow: 0 20px 50px #e5393566, 0 6px 20px #ffe57f44;
-  transform: scale(1.028) translateY(-4px);
-  background: #242436;
+  background: #23232b;
+  box-shadow: none;
+  transform: translateY(-3px) scale(1.02);
 }
 .servicio-icon {
   font-size: 2.2rem;
@@ -487,7 +477,7 @@ body > div[style*="height: 72px"] {
 .tecnologia-card {
   background: #18181c;
   border: none;
-  box-shadow: 0 6px 32px 0 #000a, 0 2px 10px #e5393510;
+  box-shadow: none;
   border-radius: 20px;
   color: #ffe082;
   padding: 28px 14px 22px 14px;
@@ -499,9 +489,8 @@ body > div[style*="height: 72px"] {
   justify-content: center;
   min-height: 70px;
   transition: 
-    transform 0.23s cubic-bezier(.44,.02,.38,1.3),
-    box-shadow 0.25s cubic-bezier(.44,.02,.38,1.3),
-    background 0.19s;
+    background 0.22s,
+    transform 0.18s;
   cursor: pointer;
   opacity: 0;
   transform: scale(0.96) translateY(32px);
@@ -510,7 +499,6 @@ body > div[style*="height: 72px"] {
 .tecnologia-card.visible {
   opacity: 1;
   transform: scale(1) translateY(0);
-  box-shadow: 0 10px 28px #e5393530, 0 2px 9px #ffe57f44;
   animation: cardPopTec 1s cubic-bezier(.44,.02,.38,1.3);
 }
 @keyframes cardPopTec {
@@ -519,20 +507,13 @@ body > div[style*="height: 72px"] {
   100% { opacity: 1; transform: scale(1) translateY(0);}
 }
 .tecnologia-card:hover {
-  background: #2b2b39;
-  box-shadow: 0 14px 36px #e5393560, 0 4px 15px #ffe08244;
-  transform: scale(1.04) translateY(-4px);
+  background: #23232b;
+  box-shadow: none;
+  transform: translateY(-3px) scale(1.02);
 }
 .tec-ico {
   font-size: 2rem;
   filter: drop-shadow(0 0 8px #e5393575);
-}
-
-.mv-card:hover,
-.servicio-card:hover,
-.tecnologia-card:hover {
-  box-shadow: 0 12px 48px 0 #e5393540, 0 4px 20px #ffe08213;
-  background: #18181c; /* Sigue el mismo color de fondo */
 }
 
 /* ====== CONTACTO ====== */
@@ -552,13 +533,11 @@ body > div[style*="height: 72px"] {
   margin-top: 28px;
   background: #18181c;
   border: none;
-  /* Sombra sutil para separar visualmente, sin recuadro ni color diferente */
-  box-shadow: 0 6px 32px 0 #000a, 0 2px 10px #e5393510;
+  box-shadow: none;
   border-radius: 20px;
   transition: 
-    transform 0.39s cubic-bezier(.44,.02,.38,1.3),
-    box-shadow 0.24s cubic-bezier(.44,.02,.38,1.3),
-    background 0.23s;
+    background 0.22s,
+    transform 0.18s;
   padding: 36px 32px 26px 32px;
   display: flex;
   flex-direction: column;
@@ -570,7 +549,6 @@ body > div[style*="height: 72px"] {
 .contact-form.visible {
   opacity: 1;
   transform: scale(1) translateY(0);
-  box-shadow: 0 14px 42px #e5393536, 0 4px 15px #ffe08233;
   animation: cardPopForm 1s cubic-bezier(.44,.02,.38,1.3);
 }
 @keyframes cardPopForm {
@@ -619,16 +597,15 @@ body > div[style*="height: 72px"] {
   border-radius: 9px;
   font-size: 1.09rem;
   font-weight: bold;
-  box-shadow: 0 2px 14px #e5393540, 0 0 0 #ffe08200;
+  box-shadow: none;
   letter-spacing: 1.2px;
   transition: 
-    background 0.2s, color 0.2s, box-shadow 0.22s;
+    background 0.2s, color 0.2s;
 }
 .btn-contacto:hover,
 .btn-contacto:focus {
   background: #b71c1c;
   color: #ffe082;
-  box-shadow: 0 8px 24px #e53935bb, 0 0 12px #ffe08277;
 }
 
 /* ====== FOOTER ====== */
@@ -642,6 +619,27 @@ footer {
   letter-spacing: 1px;
   border-top: 1.5px solid #23232b;
 }
+
+.mv-card, .servicio-card, .tecnologia-card, .contact-form {
+  background: #18181c;
+  border: 1.5px solid #23232b; /* Puedes usar #363642 o rgba(255,255,255,0.09) */
+  box-shadow: none;
+  border-radius: 20px;
+  transition:
+    background 0.22s,
+    border-color 0.2s,
+    transform 0.18s;
+}
+.mv-card:hover,
+.servicio-card:hover,
+.tecnologia-card:hover,
+.contact-form:hover {
+  background: #23232b;
+  border-color: #ffe082;
+  transform: translateY(-3px) scale(1.02);
+}
+
+
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 1200px) {
@@ -712,3 +710,4 @@ footer {
     padding: 18px 7vw 18px 7vw;
   }
 }
+
