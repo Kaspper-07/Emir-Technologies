@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <title>Servicios - Emir Technologies</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="logo-area">
+        <img src="./img/logo.png" alt="Emir Technologies Logo">
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="servicios.html" class="active">Servicios</a></li>
+        <li><a href="index.html#tecnologias">Tecnologías</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav-right"></div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  <div style="height: 72px;"></div>
+
+  <!-- Fondo VANTA.NET -->
+  <div id="servicios-vanta-bg"></div>
+
+  <!-- HERO DE SERVICIOS -->
+  <header class="hero" id="servicios-hero">
+    <div class="hero-content">
+      <h1 class="section-title" style="margin-bottom: 18px;">Nuestros servicios</h1>
+      <div class="hero-description">
+        <p>
+          Descubre cómo podemos impulsar la transformación digital, automatización y modernización de tu empresa a través de servicios tecnológicos integrales y a la medida.
+        </p>
+        <div class="description-underline"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- CARDS DE SERVICIOS DESARROLLADOS -->
+    <section class="servicios-desarrollados-section" style="margin-top:48px; margin-bottom:48px;">
+      <article class="servicio-desarrollado" id="consultoria">
+        <h2>Consultoría en TI y procesos</h2>
+        <p>Asesoría profesional para identificar oportunidades, analizar procesos y definir la mejor ruta tecnológica para el crecimiento y modernización de tu empresa.</p>
+        <ul>
+          <li>Diagnóstico y planeación estratégica en TI</li>
+          <li>Optimización y digitalización de procesos empresariales</li>
+          <li>Elaboración de proyectos y gestión de innovación</li>
+          <li>Asesoría para cumplimiento de normativas y seguridad</li>
+        </ul>
+      </article>
+      <article class="servicio-desarrollado" id="automatizacion">
+        <h2>Automatización y digitalización</h2>
+        <p>Implementamos herramientas y sistemas que eliminan tareas manuales, integran áreas y mejoran la eficiencia de tu organización.</p>
+        <ul>
+          <li>Automatización de flujos de trabajo</li>
+          <li>Integración de sistemas y plataformas</li>
+          <li>Robotización de procesos (RPA)</li>
+          <li>Digitalización de archivos y gestión documental</li>
+        </ul>
+      </article>
+      <article class="servicio-desarrollado" id="desarrollo">
+        <h2>Desarrollo de software y aplicaciones</h2>
+        <p>Soluciones digitales a la medida: web, móvil o escritorio, pensadas para tus necesidades operativas, administrativas o de negocio.</p>
+        <ul>
+          <li>Desarrollo de apps y sistemas personalizados</li>
+          <li>Desarrollo web y plataformas e-commerce</li>
+          <li>Integración con APIs y sistemas externos</li>
+          <li>Implementación de sistemas ERP y CRM</li>
+        </ul>
+      </article>
+      <article class="servicio-desarrollado" id="soporte">
+        <h2>Soporte técnico y mantenimiento</h2>
+        <p>Nos encargamos del buen funcionamiento y actualización de tus sistemas, redes y equipos tecnológicos.</p>
+        <ul>
+          <li>Mantenimiento preventivo y correctivo de equipos</li>
+          <li>Soporte remoto y presencial</li>
+          <li>Gestión de redes y seguridad informática</li>
+          <li>Respaldo y recuperación de información</li>
+        </ul>
+      </article>
+      <div style="text-align:center; margin-top:34px;">
+        <a class="btn-contacto" href="mailto:administracion@emirtechnologies.com" style="font-size:1.14rem; padding:14px 42px;">
+          Solicitar cotización
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div id="footer-vanta-bg"></div>
+    <div style="position:relative;z-index:1;">
+      <p>&copy; 2024 Emir Technologies. Todos los derechos reservados.</p>
+      <p>administracion@emirtechnologies.com</p>
+      <div class="footer-redes">
+        <span class="footer-icon-svg">
+          <!-- LinkedIn -->
+          <svg width="42" height="42" fill="none" viewBox="0 0 30 30">
+            <rect width="30" height="30" rx="6" fill="none"/>
+            <path fill="#fff" d="M11.56 21h-2.8V12.04h2.8V21zM10.16 10.8c-.87 0-1.44-.58-1.44-1.32 0-.75.59-1.31 1.47-1.31.89 0 1.44.56 1.45 1.31 0 .74-.56 1.32-1.47 1.32zm3.65 10.2h2.79V16c0-.26.02-.51.1-.69.22-.51.72-1.03 1.56-1.03 1.1 0 1.54.77 1.54 1.89v4.82h2.79V15.7c0-2.86-1.53-4.19-3.57-4.19-1.65 0-2.39.92-2.8 1.56v.01h-.02c.01-.02.02-.04.02-.06V12.04h-2.8c.04.81 0 8.96 0 8.96z"/>
+          </svg>
+        </span>
+        <span class="footer-icon-svg">
+          <!-- Instagram -->
+          <svg width="42" height="42" fill="none" viewBox="0 0 30 30">
+            <rect width="30" height="30" rx="8" fill="none"/>
+            <path fill="#fff" d="M19.25 8h-8.5A2.75 2.75 0 0 0 8 10.75v8.5A2.75 2.75 0 0 0 10.75 22h8.5A2.75 2.75 0 0 0 22 19.25v-8.5A2.75 2.75 0 0 0 19.25 8zM20.5 19.25a1.25 1.25 0 0 1-1.25 1.25h-8.5a1.25 1.25 0 0 1-1.25-1.25v-8.5a1.25 1.25 0 0 1 1.25-1.25h8.5a1.25 1.25 0 0 1 1.25 1.25v8.5z"/>
+            <circle cx="15" cy="15" r="3.25" stroke="#fff" stroke-width="1.5"/>
+            <circle cx="19" cy="11" r="0.8" fill="#fff"/>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fondo VANTA al fondo de la página -->
+  <div id="servicios-vanta-bg"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
