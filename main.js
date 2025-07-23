@@ -16,32 +16,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ==================== HERO: TYPEWRITER ====================
 document.addEventListener("DOMContentLoaded", function () {
+  // TEXTO del hero
   const heroTitleText = "Transformando tu mundo digital";
   const heroTitleElement = document.getElementById("hero-title");
   let heroTitleIndex = 0;
-  let cursorVisible = true;
+
   function typeHeroTitle() {
     if (heroTitleElement && heroTitleIndex <= heroTitleText.length) {
       heroTitleElement.innerHTML =
         heroTitleText.substring(0, heroTitleIndex) +
-        `<span class="cursor">${cursorVisible ? "|" : " "}</span>`;
+        `<span class="cursor">|</span>`;
       heroTitleIndex++;
       setTimeout(typeHeroTitle, 68);
     } else if (heroTitleElement) {
-      blinkHeroCursor();
-    }
-  }
-  function blinkHeroCursor() {
-    if (heroTitleElement) {
-      cursorVisible = !cursorVisible;
+      // Al terminar, deja SIEMPRE el cursor (animado por CSS)
       heroTitleElement.innerHTML =
-        heroTitleText +
-        `<span class="cursor">${cursorVisible ? "|" : " "}</span>`;
-      setTimeout(blinkHeroCursor, 500);
+        heroTitleText + `<span class="cursor">|</span>`;
     }
   }
+
   if (heroTitleElement) typeHeroTitle();
 });
+
 
 // ==================== FONDO VANTA GLOBE EN QUIÉNES SOMOS (index) ====================
 document.addEventListener("DOMContentLoaded", function () {
