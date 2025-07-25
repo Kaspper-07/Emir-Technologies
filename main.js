@@ -121,8 +121,8 @@ window.addEventListener('DOMContentLoaded', handleFadeOnScroll);
 document.addEventListener("DOMContentLoaded", function() {
   if (window.L && document.getElementById("js-mapa-bg")) {
     var map = L.map('js-mapa-bg', {
-      center: [19.4132326, -99.1679688],
-      zoom: 16,
+      center: [19.427777, -99.169393],
+      zoom: 17,
       zoomControl: true,
       attributionControl: false
     });
@@ -131,7 +131,9 @@ document.addEventListener("DOMContentLoaded", function() {
       maxZoom: 19
     }).addTo(map);
 
-    L.marker([19.4132326, -99.1679688]).addTo(map)
-      .bindPopup('Avenida Yucatán 54').openPopup();
+    L.marker([19.427777, -99.169393]).addTo(map)
+      .bindPopup('Río Guadiana 31').openPopup();
   }
 });
+
+
